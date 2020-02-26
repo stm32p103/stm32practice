@@ -169,24 +169,6 @@ USBD_ClassTypeDef  USBD_CDC =
   USBD_CDC_GetOtherSpeedCfgDesc,
   USBD_CDC_GetDeviceQualifierDescriptor,
 };
-/* CDC interface class callbacks structure */
-USBD_ClassTypeDef  USBD_CDC =
-{
-  USBD_CDC_Init,
-  USBD_CDC_DeInit,
-  USBD_CDC_Setup,
-  NULL,                 /* EP0_TxSent, */
-  USBD_CDC_EP0_RxReady,
-  USBD_CDC_DataIn,
-  USBD_CDC_DataOut,
-  NULL,
-  NULL,
-  NULL,
-  USBD_CDC_GetHSCfgDesc,
-  USBD_CDC_GetFSCfgDesc,
-  USBD_CDC_GetOtherSpeedCfgDesc,
-  USBD_CDC_GetDeviceQualifierDescriptor,
-};
 
 /* USB CDC device Configuration Descriptor */
 __ALIGN_BEGIN uint8_t USBD_CDC_CfgHSDesc[USB_CDC_CONFIG_DESC_SIZ] __ALIGN_END =
